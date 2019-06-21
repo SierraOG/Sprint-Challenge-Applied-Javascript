@@ -18,6 +18,7 @@
     position: absolute;
     width: 50px;
     height: 50px;
+    transition: 0.6s ease;
     cursor: pointer;
     &:hover {
       color: @lambda-times-color-primary;
@@ -38,5 +39,22 @@
   img {
      .width-100();
     display: none;
+  }
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
   }
 }
